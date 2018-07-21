@@ -15,10 +15,15 @@ namespace TDDLondonSchoolWorkshop.BussinessLayer
         {
             var weightAndHeight = csvParser.Parse(row);
 
-            double height = numberParser.Parse(weightAndHeight[0]); 
+            double height = numberParser.Parse(weightAndHeight[0]);
             double weight = numberParser.Parse(weightAndHeight[1]);
 
-            return Math.Round(weight/Math.Pow((height/100), 2), 1);
+            return CalculateBmi(weight, height);
+        }
+
+        private double CalculateBmi(double weightInKg, double heightInCm)
+        {
+            return Math.Round(weightInKg/Math.Pow((heightInCm/100), 2), 1);
         }
     }
 }
