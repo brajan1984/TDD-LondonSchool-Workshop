@@ -6,9 +6,7 @@ namespace TDDLondonSchoolWorkshop.BussinessLayer
 {
     public class CsvRowParser : ICsvRowParser
     {
-        public List<string> Parse(string row)
-        {
-            return row.Split(";").ToList();
-        }
+        public List<string> Parse(string row) =>
+            row.Split(";").ToList();
     }
 }

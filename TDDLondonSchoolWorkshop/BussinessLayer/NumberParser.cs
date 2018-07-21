@@ -5,9 +5,7 @@ namespace TDDLondonSchoolWorkshop.BussinessLayer
 {
     public class NumberParser : INumberParser
     {
-        public double Parse(string numberToParse)
-        {
-            return double.Parse(numberToParse, CultureInfo.InvariantCulture);
-        }
+        public double Parse(string numberToParse) =>
+            double.Parse(numberToParse, CultureInfo.InvariantCulture);
     }
 }
