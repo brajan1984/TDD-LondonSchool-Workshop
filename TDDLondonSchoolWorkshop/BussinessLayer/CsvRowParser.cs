@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TDDLondonSchoolWorkshop.BussinessLayer
 {
@@ -7,7 +8,7 @@ namespace TDDLondonSchoolWorkshop.BussinessLayer
     {
         public List<string> Parse(string row)
         {
-            throw new NotImplementedException();
+            return row.Split(";").ToList();
         }
     }
 }

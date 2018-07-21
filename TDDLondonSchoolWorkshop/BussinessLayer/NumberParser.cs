@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace TDDLondonSchoolWorkshop.BussinessLayer
 {
@@ -6,7 +7,7 @@ namespace TDDLondonSchoolWorkshop.BussinessLayer
     {
         public double Parse(string numberToParse)
         {
-            throw new NotImplementedException();
+            return double.Parse(numberToParse, CultureInfo.InvariantCulture);
         }
     }
 }
