@@ -13,7 +13,12 @@ namespace TDDLondonSchoolWorkshop.BussinessLayer
         }
         public double CalculateBmiFromCsv(string row)
         {
-            throw new NotImplementedException();
+            var weightAndHeight = csvParser.Parse(row);
+
+            double height = numberParser.Parse(weightAndHeight[0]); 
+            double weight = numberParser.Parse(weightAndHeight[1]);
+
+            return Math.Round(weight/Math.Pow((height/100), 2), 1);
         }
     }
 }

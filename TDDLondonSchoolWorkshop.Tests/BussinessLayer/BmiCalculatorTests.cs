@@ -10,7 +10,7 @@ namespace TDDLondonSchoolWorkshop.Tests.BussinessLayer
     public class BmiCalculatorTests
     {
         [Theory]
-        [InlineData("175;95", "175", "95", 175, 95, 31.02)]
+        [InlineData("175;95", "175", "95", 175, 95, 31.0)]
         [InlineData("168;44", "168", "44", 168, 44,  15.6)]
         [InlineData("198;120", "198", "120", 198, 120, 30.6)]
         public void CalculateBmiFromCsv_CorrectDataIsGiven_BmiIsCalculated(string csvRow, string height, string weight, int heightNo, int weightNo, double expectedBmi)
